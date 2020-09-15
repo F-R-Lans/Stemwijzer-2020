@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Stemwijzer</title>
 </head>
+
 <body>
     <main>
-        <h2>
-            <p>
-                test
-            </p>
-        </h2>
+        <div id="QuestionPage">
+            <img id="Logo" src="https://tweedekamer2017.stemwijzer.nl/public/gfx/logo-stemwijzer.svg" alt="Logo 2e Kamer">
+            <h1 id="Opinion_Short">Stemwijzer</h1>
+            <p id="Opinion_Long"></p>
+            <button id="Start_Button" style="display: inline-block;" onclick="Start_Survey()">Start</button>
+            <div id="question_buttons" style="display: none">
+                <button class="Button" onclick="AddAnswer('pro', 'next')">eens</button>
+                <button class="Button" onclick="AddAnswer('contra', 'next')">oneens</button>
+                <button class="Button" onclick="AddAnswer('ambivalent', 'next')">geen mening/weet niet</button>
+                <button class="Button" onclick="AddAnswer('null', 'previous')">terug</button>
+
+            </div>
+        </div>
     </main>
     <script src="data.js"></script>
     <script src="voting.js"></script>
 </body>
+
 </html>
