@@ -15,6 +15,11 @@ i<5: run as long as the value of i is less than 5, a value above 5 means the con
 ++ = increment operator
 statements run as long as the for loop runs
 
+dot notation is json object related 
+myObj = { "name":"John", "age":30, "car":null };
+x = myObj.name; 
+"name" is defined in the braces, and dot notation lets you access it.
+
 */
 
 
