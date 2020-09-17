@@ -42,14 +42,12 @@ function Start_Survey() {
     ShowQuestion();
     document.getElementById("Question_Buttons").style.display = "block";
     document.getElementById("Start_Button").style.display = "none";
-    console.log("Question_Buttons");
 }
 
 //short.inner is title, long.inner is statement
 function ShowQuestion() {
     Short.innerHTML = subjects[Question_Number].title;
     Long.innerHTML = subjects[Question_Number].statement;
-    console.log("test");
 };
 
 //AddAnswer function saves given answer in an array
