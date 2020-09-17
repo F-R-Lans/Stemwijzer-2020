@@ -12,19 +12,20 @@
 
 <body>
     <main>
-        <div id="QuestionPage">
+        <article id="QuestionPage">
             <img id="Logo" src="https://tweedekamer2017.stemwijzer.nl/public/gfx/logo-stemwijzer.svg" alt="Logo 2e Kamer">
-            <h1 id="Opinion_Short">Stemwijzer</h1>
-            <p id="Opinion_Long"></p>
+            <h1 id="Statement_Short">Stemwijzer</h1>
+            <p id="Statement_Long">Test op welke partij u wilt stemmen</p>
             <button id="Start_Button" style="display: inline-block;" onclick="Start_Survey()">Start</button>
-            <div id="question_buttons" style="display: none">
+            <div id="Question_Buttons" style="display: none;">
                 <button class="Button" onclick="AddAnswer('pro', 'next')">eens</button>
                 <button class="Button" onclick="AddAnswer('contra', 'next')">oneens</button>
                 <button class="Button" onclick="AddAnswer('ambivalent', 'next')">geen mening/weet niet</button>
+                <button class="Button" onclick="AddAnswer('null, next')">sla over</button>
                 <button class="Button" onclick="AddAnswer('null', 'previous')">terug</button>
-
             </div>
-        </div>
+            </ul>
+        </article>
         <div id="ResultPage" style="display: none;">
             <h1 id="Final_Results"></h1>
         </div>

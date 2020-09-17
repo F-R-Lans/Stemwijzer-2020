@@ -27,35 +27,42 @@ x = myObj.name;
 var Question_Number = 0; //question number starts at 0 and counts up
 var Answers = []; //answers are stored in an array
 var Final_Results = [] //final results are stored in an array
-    /*for(var r = 0; r<parties.length; r++) {
-        final_results[r]={"name":parties[r].name, "points":0}; 
-    } console.log(final_results); old code to log final results*/
+    /*for (var i = 0; i < parties.length; i++) {
+        final_results[i] = { "name": parties[i].name, "points": 0 };
+    }
+    console.log(final_results);*/
 
 //define opinion id's
-const Short = document.getElementById("Opinion_Short");
-const Long = document.getElementById("Opinion_Long");
+const Short = document.getElementById("Statement_Short");
+const Long = document.getElementById("Statement_Long");
 const Choice = document.getElementById("Results");
 
 //onclick Generates Question (onclick->start_survey->show question)
 function Start_Survey() {
     ShowQuestion();
-    document.getElementById("Start_Button").style.display = "none";
     document.getElementById("Question_Buttons").style.display = "block";
+    document.getElementById("Start_Button").style.display = "none";
     console.log("Question_Buttons");
 }
-//TODO: make Start_Button dissapear on onclick
 
 //short.inner is title, long.inner is statement
 function ShowQuestion() {
     Short.innerHTML = subjects[Question_Number].title;
     Long.innerHTML = subjects[Question_Number].statement;
+    console.log("test");
 };
 
-/*AddAnswer function saves given answer in an array
-function AddAnswer()
+//AddAnswer function saves given answer in an array
+function AddAnswer(answer, Counter) {
+    answers[Question_Number] = answer;
+    console.log(answers);
+    NextQuestion(Counter)
+}
 
-//NextQuestion function looks if answer is given and goes to next question 
-function NextQuestion()
+
+
+/*NextQuestion function looks if answer is given and goes to next question 
+//function NextQuestion(counter) {}
 
 //Calc_Results function calculates results, compares with party position, and adds to array if matches.button
 function Calc_Results()

@@ -4,7 +4,8 @@ main {
     margin: 0 auto;
     padding: 70px;
 }
-body{
+
+body {
     background-image: url("https://tweedekamer2017.stemwijzer.nl/public/gfx/background.jpg");
     background-repeat: no-repeat;
     background-position: top center;
@@ -24,7 +25,7 @@ body{
     background-repeat: no-repeat;
 }
 
-.button {
+.Button {
     min-width: 100px;
     min-height: 68px;
     background-color: black;
@@ -39,11 +40,11 @@ body{
     border-radius: 10px;
 }
 
-.button:hover {
+.Button:hover {
     background-color: rgb(70, 96, 105);
 }
 
-#start_button {
+#Start_Button {
     min-width: 100px;
     min-height: 68px;
     background-color: black;
@@ -57,10 +58,11 @@ body{
     cursor: pointer;
     border-radius: 10px;
 }
-#start_button:hover {
-    background-color: rgb(70, 96, 105)
 
+#Start_Button:hover {
+    background-color: rgb(70, 96, 105)
 }
+
 .hide {
     display: none;
 }
