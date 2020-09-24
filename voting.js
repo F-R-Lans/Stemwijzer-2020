@@ -4,7 +4,7 @@ var Answers = []; //answers are stored in an array
 var Final_Results = [] //final results are stored in an array
 for (var i = 0; i < parties.length; i++) {
     Final_Results[i] = { "name": parties[i].name, "points": 0 };
-} //
+} // initializes Final_Results array with 0 points
 console.log(Final_Results);
 
 //define opinion id's
