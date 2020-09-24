@@ -53,11 +53,11 @@ function NextQuestion(counter) {
 // Calc_Results function calculates results, compares with party position, and adds to array if matches.button
 // function Calc_Results()
 
-//final_results.sort sorts voting results from highest to lowest. 
+//final_results.sort sorts voting results from highest to lowest. (copied from old code, read up)
 
-Final_Results.sort(function(a, b) {
+/*Final_Results.sort(function(a, b) {
     return b["points"] - a["points"]
-});
+});*/
 
 //Show_Final_Results function prints out the final results 
 
