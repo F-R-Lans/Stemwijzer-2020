@@ -5,7 +5,6 @@ var Final_Results = [] //final results are stored in an array
 for (var i = 0; i < parties.length; i++) {
     Final_Results[i] = { "name": parties[i].name, "points": 0 };
 } // initializes Final_Results array with 0 points
-console.log(Final_Results);
 
 //define opinion id's
 const Short = document.getElementById("Statement_Short");
@@ -23,14 +22,14 @@ function Start_Survey() {
 function ShowQuestion() {
     Short.innerHTML = subjects[Question_Number].title;
     Long.innerHTML = subjects[Question_Number].statement;
-};
+}
 
 //AddAnswer function saves given answer in an array (works, not sure why yet)
 function AddAnswer(Answer, VoteCount) {
     Answers[Question_Number] = Answer;
-    console.log(Answers);
     NextQuestion(VoteCount)
 }
+
 
 //NextQuestion function looks if answer is given and goes to next question (done)
 function NextQuestion(counter) {
@@ -47,12 +46,22 @@ function NextQuestion(counter) {
 
     }
 }
+console.log(Final_Results);
 
 
 
-// Calc_Results function calculates results, compares with party position, and adds to array if matches.button
-// function Calc_Results()
+// Calc_Results function calculates results, compares with party position, and adds to array if matches
 
+function Calc_Results()
+for (let z = 0; z < Answers.length; z++) {
+    for (let x = 0; x < Final_Results.length; x++) {
+        if () {
+
+        }
+
+    }
+
+}
 //final_results.sort sorts voting results from highest to lowest. (copied from old code, read up)
 
 /*Final_Results.sort(function(a, b) {
