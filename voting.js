@@ -9,7 +9,7 @@ for (var i = 0; i < parties.length; i++) {
 //define opinion id's
 const Short = document.getElementById("Statement_Short");
 const Long = document.getElementById("Statement_Long");
-const Choice = document.getElementById("Results");
+const Choice = document.getElementById("Final_Results");
 
 //onclick Generates Question (onclick->start_survey->show question) (done)
 function Start_Survey() {
@@ -41,33 +41,38 @@ function NextQuestion(counter) {
             Question_Number--
             ShowQuestion();
         } else if (counter == 'next' && Question_Number != subjects.length) {
-            calc_results();
+            Calc_Results();
         }
 
     }
 }
-console.log(Final_Results);
 
 
 
 // Calc_Results function calculates results, compares with party position, and adds to array if matches
 
-function Calc_Results()
-for (let z = 0; z < Answers.length; z++) {
-    for (let x = 0; x < Final_Results.length; x++) {
-        if () {
+function Calc_Results() {
+    for (let z = 0; z < Answers.length; z++) {
+        for (let x = 0; x < Final_Results.length; x++) {
+            if (Answers[z] == subjects[z].parties[x].position) {
+                for (let y = 0; y < Final_Results.length; y++) {
+                    if (subjects[z].parties[x].name == Final_Results[y].name)
+                        Final_Results[y].points++;
+                }
+
+            }
 
         }
 
     }
-
+    //final_results.sort sorts voting results from highest to lowest. (forgot syntax, read up again)
+    Final_Results.sort(function(a, b) {
+        return b["points"] - a["points"]
+    });
+    Show_Final_Results()
 }
-//final_results.sort sorts voting results from highest to lowest. (copied from old code, read up)
 
-/*Final_Results.sort(function(a, b) {
-    return b["points"] - a["points"]
-});*/
-
-//Show_Final_Results function prints out the final results 
-
-// function Show_Final_Results()
+//Show_Final_Results function prints out the final results
+function Show_Final_Results() {
+    console.log("fuck you JS");
+}
