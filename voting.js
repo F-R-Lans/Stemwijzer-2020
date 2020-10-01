@@ -80,8 +80,7 @@ function Calc_Results() {
 
 //Show_Final_Results function prints out the final results
 function Show_Final_Results() {
-    console.log(Final_Results);
     document.getElementById("QuestionPage").style = "display: none";
     document.getElementById("ResultPage").style = "display: block";
     Choice.innerHTML = Final_Results;
-}
+};
