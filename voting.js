@@ -68,8 +68,6 @@ function Calc_Results() {
             }
         }
     }
-
-
     Final_Results.sort(function(a, b) { //.sort makes vars a and b, and orders from b(high), to a(low)
         return b['points'] - a['points']
     });
