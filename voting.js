@@ -53,26 +53,24 @@ function NextQuestion(counter) {
 
 function Calc_Results() {
     for (let z = 0; z < Answers.length; z++) {
-        for (let x = 0; x < Final_Results.length; x++) {
-            if (Answers[z] == subjects[z].parties[x].position) {
-                for (let y = 0; y < Final_Results.length; y++) {
-                    if (subjects[z].parties[x].name == Final_Results[y].name)
-                        Final_Results[y].points++;
+        for (let x = 0; x < Final_Results.length; x++) {}
+
+        //results.sort sorts voting results from highest to lowest. (forgot syntax, read up again)
+        /*Final_Results.sort(function(a, b) {
+            return b["points"] - a["points"]
+        });*/
+
+        //Show_Final_Results function prints out the final results
+
+        /*complete calc_results function from 2019, learn to read
+        function calc_results() {
+    for (var z = 0; z < answers.length; z++) {
+        for (var x = 0; x < final_results.length; x++) {
+            if (answers[z] == subjects[z].parties[x].position) {
+                for (var y = 0; y < final_results.length; y++) {
+                    if (subjects[z].parties[x].name == final_results[y].name)
+                        final_results[y].points++;
                 }
-
             }
-
         }
-
-    }
-    //final_results.sort sorts voting results from highest to lowest. (forgot syntax, read up again)
-    Final_Results.sort(function(a, b) {
-        return b["points"] - a["points"]
-    });
-    Show_Final_Results()
-}
-
-//Show_Final_Results function prints out the final results
-function Show_Final_Results() {
-    console.log("fuck you JS");
-}
+    }*/
