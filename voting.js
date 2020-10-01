@@ -24,7 +24,7 @@ function ShowQuestion() {
     Long.innerHTML = subjects[Question_Number].statement;
 }
 
-//AddAnswer function saves given answer in an array (works, not sure why yet)
+//AddAnswer function saves given answer in an array
 function AddAnswer(Answer, VoteCount) {
     Answers[Question_Number] = Answer;
     NextQuestion(VoteCount)
@@ -55,25 +55,20 @@ function NextQuestion(counter) {
 
 
 // Calc_Results function calculates results, compares with party position, and adds to array if matches
+//loops through questions, checks if answer matches party position, adds if matches, loops through all parties, repeats for all questions
 
 function Calc_Results() {
-    for (let z = 0; z < Answers.length; z++) { //make a loop, initialize a variable z, make it zero, increment z in z is smaller than answers.length, run everything below as long as z is smaller than answers.length
-        for (let x = 0; x < Final_Results.length; x++) { //make a nested loop, run loop 2 every time loop 1 is run, do the same with var y as var z
-            if (Answers[z] == subjects[z].parties[x].position) { //make a nested if, only run everything after this is if is met, if z in array answers is equal to z in subjects and x in parties.position
-                for (let y = 0; y < Final_Results.length; y++) { //make a nested for, if IF above is met, make a var y, and repeat what's done in z and x
-                    if (subjects[z].parties[x].name == Final_Results[y].name) //make a nested if, if z in subjects and x in parties.name are equal to y in Final_results.name, 
-                        Final_Results[y].points++; //increments points in final_results
+    for (let z = 0; z < Answers.length; z++) {
+        for (let x = 0; x < Final_Results.length; x++) {
+            if (Answers[z] == subjects[z].parties[x].position) {
+                for (let y = 0; y < Final_Results.length; y++) {
+                    if (subjects[z].parties[x].name == Final_Results[y].name)
+                        Final_Results[y].points++;
                 }
             }
         }
     }
-    // z is created to ensure the loop goes through all questions, z increments every time the answers.length goes up 1, 
-    // x increments every time Final_results.length goes up by 1
-    // z and x give an array number to the list. if answers[1] matches subjects [1].parties.[1].position, run so points can be added to that party.
-    // y increments every time Final_results.length goes up by 1, y is added to when the match is made with the party
-    // if subjects[1].parties[1].name is equal to final_results[1].name add 1 to points
 
-    // the loop takes a question, tries to match the answer with a party, if it matches, it adds 1 to their "points" and runs again, until let z is higher than question.length
 
     Final_Results.sort(function(a, b) { //.sort makes vars a and b, and orders from b(high), to a(low)
         return b['points'] - a['points']
@@ -81,7 +76,12 @@ function Calc_Results() {
     Show_Final_Results()
 }
 
+
+
 //Show_Final_Results function prints out the final results
 function Show_Final_Results() {
     console.log(Final_Results);
+    document.getElementById("QuestionPage").style = "display: none";
+    document.getElementById("ResultPage").style = "display: block";
+    Choice.innerHTML = Final_Results;
 }
