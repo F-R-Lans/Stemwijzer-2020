@@ -4,7 +4,7 @@ var Answers = []; //answers are stored in an array
 var Final_Results = [] //final results are stored in an array
 for (var i = 0; i < parties.length; i++) {
     Final_Results[i] = { "name": parties[i].name, "points": 0 };
-} // initializes Final_Results array with 0 points
+}; // initializes Final_Results array with 0 points
 
 //define opinion id's
 const Short = document.getElementById("Statement_Short");
@@ -16,19 +16,19 @@ function Start_Survey() {
     ShowQuestion();
     document.getElementById("Question_Buttons").style.display = "block";
     document.getElementById("Start_Button").style.display = "none";
-}
+};
 
 //ShowQuestion generates questions given in data.js.short.inner is title, long.inner is statement (done)
 function ShowQuestion() {
     Short.innerHTML = subjects[Question_Number].title;
     Long.innerHTML = subjects[Question_Number].statement;
-}
+};
 
 //AddAnswer function saves given answer in an array
 function AddAnswer(Answer, VoteCount) {
     Answers[Question_Number] = Answer;
     NextQuestion(VoteCount)
-}
+};
 
 
 //NextQuestion function looks if answer is given and goes to next question (done)
@@ -50,7 +50,7 @@ function NextQuestion(counter) {
 
         }
     }
-}
+};
 
 
 
@@ -68,15 +68,15 @@ function Calc_Results() {
             }
         }
     }
-    Final_Results.sort(function(a, b) { //.sort makes vars a and b, and orders from b(high), to a(low)
+    Final_Results.sort(function(a, b) { //.sort makes vars a and b, and orders from b(high), to a(low) (should be able to be smaller)
         return b['points'] - a['points']
     });
     Show_Final_Results()
-}
+};
 
 
 
-//Show_Final_Results function prints out the final results
+//Show_Final_Results function prints out the final results. (read up on map, currently spits out object array)
 function Show_Final_Results() {
     document.getElementById("QuestionPage").style = "display: none";
     document.getElementById("ResultPage").style = "display: block";
