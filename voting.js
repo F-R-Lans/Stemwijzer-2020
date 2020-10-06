@@ -56,7 +56,7 @@ function NextQuestion(counter) {
 
 // Calc_Results function calculates results, compares with party position, and adds to array if matches
 //loops through questions, checks if answer matches party position, adds if matches, loops through all parties, repeats for all questions
-
+//.sort sorts from high(b) to low(a)
 function Calc_Results() {
     for (let z = 0; z < Answers.length; z++) {
         for (let x = 0; x < Final_Results.length; x++) {
@@ -68,12 +68,10 @@ function Calc_Results() {
             }
         }
     }
-    Final_Results.sort(function(a, b) { //.sort makes vars a and b, and orders from b(high), to a(low) (should be able to be smaller)
-        return b['points'] - a['points']
-    });
-    Show_Final_Results()
+    Final_Results.sort((a, b) => b.points - a.points);
+    Show_Final_Results();
+    console.log(Final_Results);
 };
-
 
 
 //Show_Final_Results function prints out the final results. (read up on map, currently spits out object array)
