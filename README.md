@@ -38,3 +38,12 @@ function greet(name) {
 greet('John')
 
 
+example of .map:
+/*const numbers = [1, 2, 3];
+
+const items = numbers.map(n => {
+    const obj = { value: n };
+    return obj;
+
+});
+*/
