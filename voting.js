@@ -78,7 +78,7 @@ function Calc_Results() {
 function Show_Final_Results() {
     document.getElementById("QuestionPage").style = "display: none";
     document.getElementById("ResultPage").style = "display: block";
-    let decide = Final_Results.map(object => `Name: ${object.name}, Points: ${object.points}`);
+    let decide = Final_Results.map(object => `Partij: ${object.name} Punten: ${object.points}` + "<br />");
     console.log(decide);
     Choice.innerHTML = decide;
 };
