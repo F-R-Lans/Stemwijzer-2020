@@ -74,11 +74,12 @@ function Calc_Results() {
 };
 
 
-//Show_Final_Results function prints out the final results. (read up on map, currently spits out object array)
+//Show_Final_Results function prints out the final results. 
+//.map converts objects in array to string
+//TODO add linebreak in combo with join
 function Show_Final_Results() {
     document.getElementById("QuestionPage").style = "display: none";
     document.getElementById("ResultPage").style = "display: block";
-    let decide = Final_Results.map(object => `Partij: ${object.name} Punten: ${object.points}` + "<br />");
-    console.log(decide);
+    let decide = Final_Results.map(object => `Partij: ${object.name} Punten: ${object.points} <br/>`);
     Choice.innerHTML = decide;
 };
