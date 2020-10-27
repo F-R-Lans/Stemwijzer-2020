@@ -78,5 +78,7 @@ function Calc_Results() {
 function Show_Final_Results() {
     document.getElementById("QuestionPage").style = "display: none";
     document.getElementById("ResultPage").style = "display: block";
-    Choice.innerHTML = Final_Results;
+    let decide = Final_Results.map(object => `Name: ${object.name}, Points: ${object.points}`);
+    console.log(decide);
+    Choice.innerHTML = decide;
 };
