@@ -80,6 +80,6 @@ function Calc_Results() {
 function Show_Final_Results() {
     document.getElementById("QuestionPage").style = "display: none";
     document.getElementById("ResultPage").style = "display: block";
-    let decide = Final_Results.map(object => `Partij: ${object.name} Punten: ${object.points} <br/>`);
+    let decide = Final_Results.map(object => `Partij: ${object.name} Punten: ${object.points}`).join("<br/>");
     Choice.innerHTML = decide;
 };
