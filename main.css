@@ -70,3 +70,7 @@ body {
 .show {
     display: block;
 }
+
+.weighing {
+    list-style: none;
+}

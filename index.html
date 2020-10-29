@@ -14,8 +14,8 @@
     <main>
         <article id="QuestionPage">
             <img id="Logo" src="https://tweedekamer2017.stemwijzer.nl/public/gfx/logo-stemwijzer.svg" alt="Logo 2e Kamer">
-            <h1 id="Statement_Short">Stemwijzer 2e kamer</h1>
-            <p id="Statement_Long">Test welke Partij de juiste is voor u</p>
+            <h1 id="Statement_Short">StemWijzer Tweede Kamer</h1>
+            <p id="Statement_Long">Test uw politieke voorkeur aan de hand van 12 stellingen</p>
             <button id="Start_Button" style="display: inline-block;" onclick="Start_Survey()">Start</button>
             <div id="Question_Buttons" style="display: none;">
                 <button class="Button" onclick="AddAnswer('pro', 'next')">eens</button>
@@ -26,6 +26,27 @@
             </div>
             </ul>
         </article>
+        <div id="WeighPage" style="display:none;">
+            <h1> Zijn er onderwerpen die u extra belangrijk vindt?</h1>
+            <p> Aangevinkte stellingen tellen extra mee bij het berekenen van het resulaat.</p>
+            <ul class="weighing">
+                <li class="Weigh_list"> <input type="checkbox" id="weigh_1" value="weigh_add"> Bindend referendum</li>
+                <li class="Weigh_list"> <input type="checkbox" id="weigh_2" value="weigh_add"> Maatschappelijke dienstplicht</li>
+                <li class="Weigh_list"> <input type="checkbox" id="weigh_3" value="weigh_add"> Anoniem solliciteren</li>
+                <li class="Weigh_list"> <input type="checkbox" id="weigh_4" value="weigh_add"> Groepsbelediging</li>
+                <li class="Weigh_list"> <input type="checkbox" id="weigh_5" value="weigh_add"> Teelt en verkoop wiet</li>
+                <li class="Weigh_list"> <input type="checkbox" id="weigh_6" value="weigh_add"> Vervroegde vrijlating</li>
+                <li class="Weigh_list"> <input type="checkbox" id="weigh_7" value="weigh_add"> Vennootschapsbelasting</li>
+                <li class="Weigh_list"> <input type="checkbox" id="weigh_8" value="weigh_add"> Belasting hoogste inkomens</li>
+                <li class="Weigh_list"> <input type="checkbox" id="weigh_9" value="weigh_add"> Tijdelijke arbeidscontracten</li>
+                <li class="Weigh_list"> <input type="checkbox" id="weigh_10" value="weigh_add"> AOW-leeftijd 65</li>
+                <li class="Weigh_list"> <input type="checkbox" id="weigh_11" value="weigh_add"> Verzekering zzp'ers</li>
+                <li class="Weigh_list"> <input type="checkbox" id="weigh_12" value="weigh_add"> Leenstelsel studenten</li>
+            </ul>
+            <p> <input type="checkbox" id="weigh_secular" value="secular"> vink aan als u alleen de seculiere partijen wilt meenemen in uw resultaat.</p>
+            <p> <input type="checkbox" id="weigh_large" value="large"> vink aan als u alleen de grote partijen wilt meenemen in uw resultaat.</p>
+            <button class="Button" onclick="Calc_Results()"> Ga Verder</button>
+        </div>
         <div id="ResultPage" style="display: none;">
             <h1 id="Final_Results"></h1>
         </div>
