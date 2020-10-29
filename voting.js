@@ -5,7 +5,8 @@ var Final_Results = [] //final results are stored in an array
 for (var i = 0; i < parties.length; i++) {
     Final_Results[i] = { "name": parties[i].name, "points": 0 };
 }; // initialize Final_Results array with 0 points
-const big_party = 15
+var secular_parties = false
+const large_parties = 15;
 
 
 //define opinion id's
